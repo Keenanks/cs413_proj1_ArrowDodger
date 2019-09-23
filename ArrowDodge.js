@@ -81,18 +81,13 @@ function keydownEvenHandler(e)
 			jumpCount,grounded = false;
 	   }
 	   
-	if(e.keyCode == 70 /*r key*/ && pressed == false)
+	if(e.keyCode == 70 /*f key*/ && pressed == false)
 	   {
 		   pressed == true;
 		   savekey = 70;
 		   restart();
 	   }
 	   
-	if(e.keyCode == 81 /*q key*/)
-	{
-		hitTracker = 5;
-		healthSprite = healthTextureFull;
-	}
 		   
 			
 	     
@@ -196,7 +191,7 @@ function moveArrow()
 	arrowSprite.position.x -= 10;
 	checkIfHit(savekey);
 	updateHealth();
-	if(hitTracker != 4)
+	if(hitTracker < 4)
 	{
 		
 		if(arrowSprite.position.x <= 0)
